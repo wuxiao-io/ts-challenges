@@ -1,5 +1,5 @@
 // Impl1
-type EndsWidth<T extends string, U extends string> = T extends `${infer R}${U}` ? true : false;
+type EndsWith<T extends string, U extends string> = T extends `${infer R}${U}` ? true : false;
 
 // Impl2
 type RemoveFirst<T extends string> = T extends `${infer first}${infer rest}` ? rest : ''
@@ -11,6 +11,6 @@ type EndsWith2<T extends string, U extends string> = U extends '' ? true :
   : false;
 
 export {
-  EndsWidth,
+  EndsWith,
   EndsWith2
 }
